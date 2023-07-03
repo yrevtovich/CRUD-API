@@ -2,24 +2,35 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["ESNext"],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": false,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": false,
+    // "emitDecoratorMetadata": false,
+    "allowImportingTsExtensions": true,
     "downlevelIteration": true,
-    "noEmit": false,
+    "noEmit": true,
     "noImplicitAny": true,
     "baseUrl": ".",
     "types": [ "node" ],
     "outDir": "dist",
   },
-  "files": ["src/index.ts"]
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+  ],  
+  "ts-node": {
+      "esm": true
+  },
 }
